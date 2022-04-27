@@ -9,13 +9,14 @@ const NewExpense = (props) => {
             ...enteredExpenseData,
             id: (Math.random()*10).toString(),
         }
-        props.onAddExpense(expenseData)
+        props.onAddExpense(expenseData) //This line passes the expenseData (entered by user in ExpenseForm) to App.js
     }
 
     return (
         <div className='new-expense'>
-            {/* onSaveExpenseData is a custom prop that is passed to its child component ExpenseForm */}
-            <ExpenseForm onSaveExpenseData={saveExpenseDataHandler}/>
+            <ExpenseForm onSaveExpenseData={saveExpenseDataHandler}/>  {/* onSaveExpenseData is a custom prop that takes data from its child component ExpenseForm and 
+            passes that data to saveExpenseDataHandler to create an object (expenseData) which is then passed to
+            App.js through the prop "onAddExpense"  */}
         </div>
     )
 };

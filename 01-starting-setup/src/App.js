@@ -32,7 +32,10 @@ function App() {
 
   return (
     <div>
-      <NewExpense onAddExpense={addExpenseHandler}/>
+      
+      <NewExpense onAddExpense={addExpenseHandler}/> {/* onAddExpense is a prop that will be used in the NewExpense component
+      which points to the addExpenseHandler function. It essentially takes data from NewExpense.js
+      and passes it to App.js */}
       <Expenses item={expenses}/>
     </div>
   );

@@ -12,6 +12,10 @@ const ExpenseForm = (props) => {
     //     enteredSate: '',
     // })
 
+/* These Handler functions are pointed to from the JSX elements. 
+These function use the "useState" functionality to store user input data
+to a specific STATE by passing the event data to a setFunction tied to a variable name, like enteredTitle.
+The STATE data can then be used (as in submitHandler() like global state variables */
     const titleChangeHandler = (event) => {
         setEnteredTitle(event.target.value)
         // setUserInput( (prevState) => {
@@ -52,7 +56,6 @@ const ExpenseForm = (props) => {
             amount: enteredAmount,
             date: new Date(enteredDate),
         }
-
         props.onSaveExpenseData(expenseData);
         // Resets the values in the inputs
         setEnteredTitle('');
