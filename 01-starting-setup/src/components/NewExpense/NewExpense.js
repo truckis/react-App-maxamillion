@@ -22,3 +22,11 @@ const NewExpense = (props) => {
 };
 
 export default NewExpense;
+
+/* onSaveExpenseData is a Prop which is used in ExpenseForm.js in the
+submitHandler function. expenseData from ExpenseForm is then passed into 
+saveExpenseDataHandler which pretty much takes the existing expenseData object
+and adds an id to it. 
+
+Then onAddExpense is a Prop from App.js which takes the new expenseData
+and passes it to the addExpenseHandler function in App.js. */

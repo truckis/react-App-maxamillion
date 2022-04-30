@@ -87,3 +87,9 @@ The STATE data can then be used (as in submitHandler() like global state variabl
 };
 
 export default ExpenseForm;
+
+
+/* This document creates the structure of the form and the necisary functions
+to submit the data from the usder input. Each input has its own function tied to its own
+state. The submitHandler function creates an object with all the
+state data then passes that to NewExpense.js via onSaveExpenseData prop.  */
