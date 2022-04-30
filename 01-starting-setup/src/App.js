@@ -27,6 +27,7 @@ const DUMMY_EXPENSES = [
   }
 ];
 
+
 const App = () => {
 
  const [expenses, setExpenses] = useState(DUMMY_EXPENSES)  
@@ -42,18 +43,13 @@ const App = () => {
     });
    };
 
-   const filterYearHandler = (year) => {
-     let results = expenses.filter(date => date.date.getFullYear() == year)
-     console.log("IN filterYearHandler", results)
-   }
-
   return (
     <div>
       
       <NewExpense onAddExpense={addExpenseHandler}/> {/* onAddExpense is a prop that will be used in the NewExpense component
       which points to the addExpenseHandler function. It essentially takes data from NewExpense.js
       and passes it to App.js */}
-      <Expenses items={expenses} filterYear={filterYearHandler}/>
+      <Expenses items={expenses} />
     </div>
   );
 }
