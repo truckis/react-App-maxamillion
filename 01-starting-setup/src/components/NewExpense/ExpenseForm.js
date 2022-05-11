@@ -63,6 +63,8 @@ The STATE data can then be used (as in submitHandler() like global state variabl
         setEnteredDate('');
     };
 
+ 
+
     return (
         <form onSubmit={submitHandler}>
             <div className='new-expense__controls'>
@@ -72,7 +74,7 @@ The STATE data can then be used (as in submitHandler() like global state variabl
                 </div>
                 <div className='new-expense__control'>
                     <label>Amount</label>
-                    <input type='number' value={enteredAmount} min='0.01' step='1.0' onChange={amountChangeHandler}/>
+                    <input type='number' value={enteredAmount} min='0.0' step='1.0' onChange={amountChangeHandler}/>
                 </div>
                 <div className='new-expense__control'>
                     <label>Date</label>
@@ -80,6 +82,9 @@ The STATE data can then be used (as in submitHandler() like global state variabl
                 </div>
             </div>
             <div className='new-expense__actions'>
+                {/* onClick is a prop in NewExpense.js. This 
+                line invokes stopEditingHandler when clicked. */}
+                <button type='button' onClick={props.onCancel}>Cancel</button>
                 <button type='submit'>Add Expense</button>
             </div>
         </form>

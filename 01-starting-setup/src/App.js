@@ -35,7 +35,7 @@ const App = () => {
   /* This function is invoked when a user submits the NewExpense Form */
   const addExpenseHandler = (expense) => {
     console.log("IN APP.js")
-    console.log(expense)
+    console.log(expenses)
     /* This function creates a new array of expenses with the newly
     added expense, the setExpenses pretty much is a function to update the state*/
     setExpenses((prevExpenses) => {
