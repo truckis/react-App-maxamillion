@@ -1,0 +1,57 @@
+.user-input_controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    background-color: #a892ee;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.user-input_control label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .user-input_control input {
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 20rem;
+    max-width: 100%;
+  }
+  
+  .user-input_control textarea {
+    width: 40rem;
+    height: 5rem;
+    resize: none;
+    overflow: scroll;
+    border-radius: 6px;
+    padding: 1%;
+    border: 1px solid #40005d;
+    font: inherit;
+  }
+
+  .user-input_actions button {
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid #40005d;
+    background-color: #40005d;
+    color: white;
+    border-radius: 12px;
+    margin-right: 1rem;
+  }
+  
+  .user-input_actions button:hover,
+  .user-input_actions button:active {
+    background-color: #510674;
+    border-color: #510674;
+  }
